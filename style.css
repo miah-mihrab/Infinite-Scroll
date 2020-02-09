@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #296ca8;
+    margin: 0;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.filter-container {
+    margin-top: 0;
+    width: 80vw;
+    max-width: 800px;
+}
+
+.filter {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+}
+
+.post {
+    position: relative;
+    background-color: #0d3457;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+    padding: 20px;
+    margin: 40px 0;
+    display: flex;
+    width: 80vw;
+    max-width: 800px;
+}
+
+.post-title {
+    margin: 0;
+}
+
+.post-body {
+    margin: 15px 0 0;
+    line-height: 1.3;
+}
+
+.post-info {
+    margin-left: 20px;
+}
+
+.post .number {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    font-size: 15px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #296ca8;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    opacity: 0;
+    display: flex;
+    position: fixed;
+    bottom: 50px;
+    transition: opacity 0.3s ease-in;
+}
+
+.loader.show {
+    opacity: 1;
+}
+
+.circle {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px;
+    animation: bounce1 1s ease-in infinite;
+}
+
+.circle:nth-child(2) {
+    animation: bounce2 1.3s ease-in infinite;
+}
+
+.circle:nth-child(3) {
+    animation: bounce3 1.1s ease-in infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes bounce1 {
+
+    0%,
+    100% {
+        transform: scale(1) translateY(0);
+    }
+
+    50% {
+        transform: scale(1.1) translateY(2px);
+    }
+}
+
+@keyframes bounce2 {
+
+    0%,
+    100% {
+        transform: scale(1) translateY(0);
+    }
+
+    50% {
+        transform: scale(1.2) translateY(2px);
+    }
+}
+
+@keyframes bounce3 {
+
+    0%,
+    100% {
+        transform: scale(1) translateY(0);
+    }
+
+    50% {
+        transform: scale(1.3) translateY(2px);
+    }
+}
